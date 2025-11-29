@@ -28,6 +28,11 @@ function genererPieces(pieces) {
       ? "En stock"
       : "Rupture de stock";
 
+    //Code ajouté
+    const avisBouton = document.createElement("button");
+    avisBouton.dataset.id = article.id;
+    avisBouton.textContent = "Afficher les avis";
+
     // On rattache la balise article a la section Fiches
     sectionFiches.appendChild(pieceElement);
     // On rattache l’image à pieceElement (la balise article)
@@ -38,6 +43,8 @@ function genererPieces(pieces) {
     //Ajout des éléments au DOM pour l'exercice
     pieceElement.appendChild(descriptionElement);
     pieceElement.appendChild(stockElement);
+    //Code ajouté
+    pieceElement.appendChild(avisBouton);
   }
 }
 
